@@ -17,6 +17,12 @@ body {
 h1 {
   padding: 8px;
   border-radius: 4px;
+  margin-bottom: 4rem; /* Increased space below the header */
+}
+
+/* Add more space above the grid/cards */
+.row.g-4 {
+  margin-top: 2rem;
 }
 
 /* Limit image dimensions so tiles don’t overflow the layout */
@@ -29,8 +35,8 @@ img {
 .border-tile {
   border: 20px solid transparent;
   border-image: url('assets/wood.jpg') 30 round;
-  padding: 5px;
-  background-color: white;
+  padding: 0; /* Remove inner white space */
+  background-color: transparent; /* Remove white background */
 }
 
 /* Optional caption style if you add labels under your tiles */
@@ -39,6 +45,15 @@ img {
   margin-top: 8px;
   font-size: 14px;
   color: #444;
+}
+
+/* Card hover effect for subtle zoom and shadow */
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 /* 💡 Optional Enhancements:
